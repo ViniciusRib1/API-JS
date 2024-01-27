@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sua Aplicação</title>
+  <title>Contato</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,6 +37,27 @@
       color: rgb(72, 71, 71);
       text-decoration: underline;
       font-size: 20px;
+    }
+    .contato a {
+      color: black;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid black;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    .contato a:hover {
+      color: black;
+      text-shadow: 1px 1px 1px white;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 5px;
+      align-items: center;
+      text-align: center;
+      transition: all 0.5s;
+      font-size: 30px;
     }
   </style>
   <script>
@@ -77,16 +98,17 @@
 <body>
           <header class="menu">
                     <h1>Minha API!</h1>
-                    <a href="/public/html/index.html" id="select">Home</a>
-                    <a href="/public/html/sobre.html" >Sobre</a>
-                    <a href="/public/html/contato.html" >Contato</a>
-                    <a href="">Login</a>
+                    <a href="index.html" >Home</a>
+                    <a href="sobre.html" >Sobre</a>
+                    <a href="contato.html" >Contato</a>
+                    <a href="index.html" id="select">Login</a>
           </header>
 
           <div class="sobre">
-                    <h1>Bem-vindo!!</h1>
-                    <p>Esse é o começo da API </p>
+                    <h1>Faça o seu login aí:</h1>
           </div>
   
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
