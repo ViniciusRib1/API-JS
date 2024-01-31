@@ -59,14 +59,42 @@
       transition: all 0.5s;
       font-size: 30px;
     }
-    form {
-      display: inline-block;
-      justify-content: center;
-      text-align: left;
-    }
-    form input {
-      width: 300px;
-    }
+    .form-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+
+}
+
+.form {
+  text-align: left;
+  align-items: left;
+}
+
+.form input {
+  width: 200px;
+}
+
+#enviar {
+  background-color: black;
+  color: white;
+  border: black 2px solid;
+  padding: 5px;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+
+#enviar:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) 2px solid;
+  padding: 5px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -114,12 +142,12 @@
 
           <div class="sobre">
             <h1>Login</h1>
-                    <form>
+                    <form class="form-container">
                       <h2>Coloque seu user name:</h2>
                       <input type="text" name="" id="">
                       <h2>Coloque sua senha:</h2>
                       <input type="password" name="" id=""> <br> <br>
-                      <input type="submit" value="Enviar" placeholder="Enviar">
+                      <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
                       <p>Ainda não tem uma conta? <a href="registrar-se.html">Registra-se!</a></p>
                     </form>
           </div>
