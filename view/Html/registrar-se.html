@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato</title>
+  <title>Registra-se</title>
   <link rel="stylesheet" href="/view/Css/register.css">
+
+  <script>
+
+    function versenha() {
+      const senha = document.getElementById("senhain");
+const versenha = document.getElementById("olhoaberto");
+const olhofe = document.getElementById("olhofechado");
+
+versenha.addEventListener('click', function() {
+    if (senha.type === 'password') {
+        senha.type = 'text';
+    } else {
+        senha.type = 'password';
+    }
+});
+    }
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const outputDiv = document.getElementById('output');
@@ -60,7 +77,12 @@
                       <h2>Coloque seu user name:</h2>
                       <input type="text" name="" id="">
                       <h2>Coloque sua senha:</h2>
-                      <input type="password" name="" id=""> <br> <br>
+                      <div class="senha">
+                        <input type="password" name="" id="senhain"> <br> 
+                        <a class="versenha" onclick="versenha()" id="olhoaberto"><ion-icon name="eye-outline"></ion-icon></a  >
+                        <a class="versenha1" onclick="versenha()" ><ion-icon name="eye-off-outline" id="olhofechado"></ion-icon></a>
+                      </div>
+                      <br>
                       <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
                     </div>
                     </form>

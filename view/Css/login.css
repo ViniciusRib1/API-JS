@@ -69,6 +69,9 @@ body {
     .form input {
       font-size: 20px;
     }
+    .form input:focus {
+          outline: none;
+        }
     
     #enviar {
       justify-content: center;
@@ -93,3 +96,24 @@ body {
     p {
       margin-bottom: 400px;
     }
+
+    .senha {
+          border: 1px black solid;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+    }
+    .senha input {
+          border: none;
+          width: 350px;
+    }
+    .senha input:focus {
+          width: 350px;
+          outline: none;
+}
+.versenha {
+          cursor: pointer;
+}
+.versenha1 {
+          display: none;
+}

@@ -91,6 +91,9 @@ body {
       transition: all 0.5s;
       cursor: pointer;
     }
+    input:focus {
+      outline: none;
+    }
     .foto {
       display: flex;
       justify-content: center; /* Centraliza horizontalmente */
@@ -102,3 +105,23 @@ body {
       margin: 0 auto; /* Centraliza horizontalmente dentro do contêiner pai */
       cursor: pointer;
     }
+    .senha {
+      border: 1px black solid;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+}
+.senha input {
+      border: none;
+      width: 350px;
+}
+.senha input:focus {
+      width: 350px;
+      outline: none;
+}
+.versenha {
+      cursor: pointer;
+}
+.versenha1 {
+      display: none;
+}
