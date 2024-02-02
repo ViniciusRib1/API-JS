@@ -5,96 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0px;
-    }
-
-    #output {
-      margin-top: 20px;
-    }
-    .menu {
-          background-color: black;
-          color: white;
-          padding: 10px;
-          text-align: center;
-    }
-    .menu a {
-          color: white;
-          text-decoration: none;
-          padding: 10px;
-          transition: all 1s;
-    }
-    .menu a:hover{
-          opacity: 1px;
-          color: rgb(72, 71, 71);
-          transition: all 1s;
-    }
-    .sobre {
-          text-align: center;
-    }
-    #select {
-      color: rgb(72, 71, 71);
-      text-decoration: underline;
-      font-size: 20px;
-    }
-    .contato a {
-      color: black;
-      padding: 10px;
-      margin: 10px;
-      border: 2px solid black;
-      border-radius: 5px;
-      align-items: center;
-      text-align: center;
-      transition: all 0.5s;
-    }
-    .contato a:hover {
-      color: black;
-      text-shadow: 1px 1px 1px white;
-      padding: 20px;
-      border: 2px solid black;
-      border-radius: 5px;
-      align-items: center;
-      text-align: center;
-      transition: all 0.5s;
-      font-size: 30px;
-    }
-    .form-container {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-
-}
-
-.form {
-  text-align: left;
-  align-items: left;
-}
-
-.form input {
-  width: 200px;
-}
-
-#enviar {
-  background-color: black;
-  color: white;
-  border: black 2px solid;
-  padding: 5px;
-  border-radius: 2px;
-  transition: all 0.5s;
-}
-
-#enviar:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: rgb(0, 0, 0) 2px solid;
-  padding: 5px;
-  border-radius: 2px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -130,6 +40,7 @@
       fetchDataFromAPI();
     });
   </script>
+  <link rel="stylesheet" href="/view/Css/login.css">
 </head>
 <body>
           <header class="menu">
@@ -143,12 +54,14 @@
           <div class="sobre">
             <h1>Login</h1>
                     <form class="form-container">
+                      <div class="form">
                       <h2>Coloque seu user name:</h2>
                       <input type="text" name="" id="">
                       <h2>Coloque sua senha:</h2>
                       <input type="password" name="" id=""> <br> <br>
                       <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
                       <p>Ainda não tem uma conta? <a href="registrar-se.html">Registra-se!</a></p>
+                    </div>
                     </form>
           </div>
   
