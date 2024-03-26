@@ -4,13 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+<style>
+  body {
+          font-family: Arial, sans-serif;
+          margin: 0px;
+        }
+    
+        #output {
+          margin-top: 20px;
+        }
+        .menu {
+              background-color: black;
+              color: white;
+              padding: 10px;
+              text-align: center;
+        }
+        .menu a {
+              color: white;
+              text-decoration: none;
+              padding: 10px;
+              transition: all 1s;
+        }
+        .menu a:hover{
+              opacity: 1px;
+              color: rgb(72, 71, 71);
+              transition: all 1s;
+        }
+        .sobre {
+              text-align: center;
+        }
+        #select {
+          color: rgb(72, 71, 71);
+          text-decoration: underline;
+          font-size: 20px;
+        }
+        .contato a {
+          color: black;
+          padding: 10px;
+          margin: 10px;
+          border: 2px solid black;
+          border-radius: 5px;
+          align-items: center;
+          text-align: center;
+          transition: all 0.5s;
+        }
+        .contato a:hover {
+          color: black;
+          text-shadow: 1px 1px 1px white;
+          padding: 20px;
+          border: 2px solid black;
+          border-radius: 5px;
+          align-items: center;
+          text-align: center;
+          transition: all 0.5s;
+          font-size: 30px;
+        }
+        .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    .form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 400px;
+    }
+    
+    .form input {
+      font-size: 20px;
+    }
+    .form input:focus {
+          outline: none;
+        }
+    
+    #enviar {
+      justify-content: center;
+      background-color: black;
+      color: white;
+      border: black 2px solid;
+      padding: 10px;
+      border-radius: 2px;
+      transition: all 0.5s;
+    }
+    
+    #enviar:hover {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border: rgb(0, 0, 0) 2px solid;
+      border-radius: 2px;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+    p {
+      margin-bottom: 400px;
+    }
+
+    .senha {
+          border: 1px black solid;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+    }
+    .senha input {
+          border: none;
+          width: 350px;
+    }
+    .senha input:focus {
+          width: 350px;
+          outline: none;
+}
+.versenha {
+          cursor: pointer;
+          width: 20px;
+}
+.versenha1 {
+          display: none;
+          width: 20px;
+}
+</style>
 
   <script>
 
     function versenha() {
       const senha = document.getElementById("senhain");
-const versenha = document.getElementById("olhoaberto");
-const olhofe = document.getElementById("olhofechado");
 
 versenha.addEventListener('click', function() {
     if (senha.type === 'password') {
@@ -56,7 +177,6 @@ versenha.addEventListener('click', function() {
       fetchDataFromAPI();
     });
   </script>
-  <link rel="stylesheet" href="/view/Css/login.css">
 </head>
 <body>
           <header class="menu">
@@ -86,6 +206,9 @@ versenha.addEventListener('click', function() {
                     </div>
                     </form>
           </div>
+          <footer style="text-align: center;">
+            <h1>Criado por Vinicius</h1>
+        </footer>
   
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
