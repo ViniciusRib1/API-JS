@@ -3,42 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0px;
-    }
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
 
-    #output {
-      margin-top: 20px;
-    }
-    .menu {
-          background-color: black;
-          color: white;
-          padding: 10px;
-          text-align: center;
-    }
-    .menu a {
-          color: white;
-          text-decoration: none;
-          padding: 10px;
-          transition: all 1s;
-    }
-    .menu a:hover{
-          opacity: 1px;
-          color: rgb(72, 71, 71);
-          transition: all 1s;
-    }
-    .sobre {
-          text-align: center;
-    }
-    #select {
-      color: rgb(72, 71, 71);
-      text-decoration: underline;
-      font-size: 20px;
-    }
-  </style>
+  <script>
+
+    function versenha() {
+      const senha = document.getElementById("senhain");
+      let olhoaberto1 = document.getElementById("olhoaberto1");
+      let olhoaberto2 = document.getElementById("olhoaberto2");
+
+      if (senha.type === 'password') {
+          senha.type = 'text';
+          olhoaberto2.style.display = "block";
+          olhoaberto1.style.display = "none";
+      } else {
+          senha.type = 'password';
+          olhoaberto2.style.display = "none";
+          olhoaberto1.style.display = "block";
+      }
+
+}
+  </script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const outputDiv = document.getElementById('output');
@@ -46,7 +33,7 @@
       // Função para buscar dados da API
       const fetchDataFromAPI = async () => {
         try {
-          const response = await fetch('http://localhost:3000/menu'); // Substitua pela URL da sua API
+          const response = await fetch('http://localhost:3000/'); // Substitua pela URL da sua API
           const data = await response.json();
 
           // Exibir os dados na página
@@ -77,16 +64,37 @@
 <body>
           <header class="menu">
                     <h1>Minha API!</h1>
-                    <a href="index.html" id="select">Home</a>
-                    <a href="sobre.html" >Sobre</a>
-                    <a href="contato.html" >Contato</a>
-                    <a href="login.html">Login</a>
           </header>
+          <br>
+
           <div class="sobre">
-          <h1>Logue-se para ver o Menu em <a href="login.html">Login</a></h1>
+                    <form class="form-container">
+                      <div class="form">
+                      <h1>Login</h1>
+                      <h2>Coloque seu nome de usuário:</h2>
+                      <input type="text">
+                      <h2>Coloque sua senha:</h2>
+                      <div class="senha">
+                        <input type="password" name="" id="senhain"> <br> 
+                        <span>
+                          <a class="versenha" onclick="versenha()" id="olhoaberto1"><ion-icon name="eye-off-outline"></ion-icon></ion-icon></a>
+                          <a class="versenha" onclick="versenha()" id="olhoaberto2" style="display: none;"><ion-icon name="eye-outline"></ion-icon></ion-icon></a>
+                          
+                        </span>
+                        
+                      </div>
+                      
+                       <br>
+                      <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
+                      <p>Ainda não tem uma conta? <a href="registrar-se.html">Registra-se!</a></p>
+                    </div>
+                    </form>
           </div>
           <footer style="text-align: center;">
             <h1>Criado por Vinicius</h1>
         </footer>
+  
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

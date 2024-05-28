@@ -3,155 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registra-se</title>
-  <link rel="stylesheet" href="/view/Css/register.css">
-
-  <style>
-    body {
-          font-family: Arial, sans-serif;
-          margin: 0px;
-        }
-    
-        #output {
-          margin-top: 20px;
-        }
-        .menu {
-              background-color: black;
-              color: white;
-              padding: 10px;
-              text-align: center;
-        }
-        .menu a {
-              color: white;
-              text-decoration: none;
-              padding: 10px;
-              transition: all 1s;
-        }
-        .menu a:hover{
-              opacity: 1px;
-              color: rgb(72, 71, 71);
-              transition: all 1s;
-        }
-        .sobre {
-              text-align: center;
-        }
-        #select {
-          color: rgb(72, 71, 71);
-          text-decoration: underline;
-          font-size: 20px;
-        }
-        .contato a {
-          color: black;
-          padding: 10px;
-          margin: 10px;
-          border: 2px solid black;
-          border-radius: 5px;
-          align-items: center;
-          text-align: center;
-          transition: all 0.5s;
-        }
-        .contato a:hover {
-          color: black;
-          text-shadow: 1px 1px 1px white;
-          padding: 20px;
-          border: 2px solid black;
-          border-radius: 5px;
-          align-items: center;
-          text-align: center;
-          transition: all 0.5s;
-          font-size: 30px;
-        }
-        .form-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    }
-    
-    .form {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      width: 400px;
-    }
-    
-    .form input {
-      font-size: 20px;
-    }
-    
-    #enviar {
-      justify-content: center;
-      background-color: black;
-      color: white;
-      border: black 2px solid;
-      padding: 10px;
-      border-radius: 2px;
-      transition: all 0.5s;
-      margin-bottom: 400px;
-    }
-    
-    #enviar:hover {
-      display: flex;
-      justify-content: center;
-      background-color: rgb(255, 255, 255);
-      color: rgb(0, 0, 0);
-      border: rgb(0, 0, 0) 2px solid;
-      border-radius: 2px;
-      transition: all 0.5s;
-      cursor: pointer;
-    }
-    input:focus {
-      outline: none;
-    }
-    .foto {
-      display: flex;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      width: 100px; /* Largura fixa */
-      height: 100px; /* Altura fixa */
-      border: 2px solid black;
-      border-radius: 50%; /* Define a forma como um círculo */
-      margin: 0 auto; /* Centraliza horizontalmente dentro do contêiner pai */
-      cursor: pointer;
-    }
-    .senha {
-      border: 1px black solid;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-}
-.senha input {
-      border: none;
-      width: 350px;
-}
-.senha input:focus {
-      width: 350px;
-      outline: none;
-}
-.versenha {
-      cursor: pointer;
-}
-.versenha1 {
-      display: none;
-}
-  </style>
+  <title>Login</title>
+  <link rel="stylesheet" href="regiter.css">  
 
   <script>
 
     function versenha() {
       const senha = document.getElementById("senhain");
-const versenha = document.getElementById("olhoaberto");
-const olhofe = document.getElementById("olhofechado");
+      let olhoaberto1 = document.getElementById("olhoaberto1");
+      let olhoaberto2 = document.getElementById("olhoaberto2");
 
-versenha.addEventListener('click', function() {
-    if (senha.type === 'password') {
-        senha.type = 'text';
-    } else {
-        senha.type = 'password';
-    }
-});
+      if (senha.type === 'password') {
+          senha.type = 'text';
+          olhoaberto2.style.display = "block";
+          olhoaberto1.style.display = "none";
+      } else {
+          senha.type = 'password';
+          olhoaberto2.style.display = "none";
+          olhoaberto1.style.display = "block";
+      }
     }
   </script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const outputDiv = document.getElementById('output');
@@ -159,7 +32,7 @@ versenha.addEventListener('click', function() {
       // Função para buscar dados da API
       const fetchDataFromAPI = async () => {
         try {
-          const response = await fetch('http://localhost:3000/sua-rota-api'); // Substitua pela URL da sua API
+          const response = await fetch('http://localhost:3000/login'); // Substitua pela URL da sua API
           const data = await response.json();
 
           // Exibir os dados na página
@@ -190,29 +63,28 @@ versenha.addEventListener('click', function() {
 <body>
           <header class="menu">
                     <h1>Minha API!</h1>
-                    <a href="index.html" >Home</a>
-                    <a href="sobre.html" >Sobre</a>
-                    <a href="contato.html" >Contato</a>
-                    <a href="index.html" id="select">Login</a>
           </header>
-
+          <br>
           <div class="sobre">
-            <h1>Cadastre-se!</h1>
                     <form class="form-container">
                       <div class="form">
-                      <h2>Coloque uma foto:</h2>
-                      <div class="foto"></div>
-                      <h2>Coloque seu email:</h2>
-                      <input type="email">
-                      <h2>Coloque seu user name:</h2>
-                      <input type="text" name="" id="">
+                        <h1>Registre-se!</h1>
+                      <h2>Coloque seu E-mail:</h2>
+                      <input type="email" name="" id="">
+                      <h2>Coloque seu nome de usuário:</h2>
+                      <input type="text">
                       <h2>Coloque sua senha:</h2>
                       <div class="senha">
                         <input type="password" name="" id="senhain"> <br> 
-                        <a class="versenha" onclick="versenha()" id="olhoaberto"><ion-icon name="eye-outline"></ion-icon></a  >
-                        <a class="versenha1" onclick="versenha()" ><ion-icon name="eye-off-outline" id="olhofechado"></ion-icon></a>
+                        
+                        <span>
+                          <a class="versenha" onclick="versenha()" id="olhoaberto1"><ion-icon name="eye-off-outline"></ion-icon></ion-icon></a>
+                          <a class="versenha" onclick="versenha()" id="olhoaberto2" style="display: none;"><ion-icon name="eye-outline"></ion-icon></ion-icon></a>
+                          
+                        </span>
                       </div>
-                      <br>
+                      
+                       <br>
                       <input type="submit" value="Enviar" placeholder="Enviar" id="enviar">
                     </div>
                     </form>
