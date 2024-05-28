@@ -123,8 +123,10 @@ margin-bottom: 400px;
     cursor: pointer;
     width: 40px;
     display: block;
+    transition: initial 2ms;
 }
 .versenha1 {
     display: none;
     width: 40px;
+    transition: initial 2ms;
 }
