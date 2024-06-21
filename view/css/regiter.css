@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+  }
+
+  #output {
+    margin-top: 20px;
+  }
+  .menu {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+  }
+  .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: all 1s;
+  }
+  .menu a:hover{
+        opacity: 1px;
+        color: rgb(72, 71, 71);
+        transition: all 1s;
+  }
+  .sobre {
+        text-align: center;
+  }
+  #select {
+    color: rgb(72, 71, 71);
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  .contato a {
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .contato a:hover {
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 30px;
+  }
+  .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.form {
+display: flex;
+flex-direction: column;
+text-align: left;
+width: 500px;
+height: 50%;
+border: 2px solid black;
+padding: 20px;
+}
+
+.form input {
+font-size: 20px;
+}
+.form h1 {
+text-align: center;
+border-bottom: solid black;
+padding-bottom: 20px;
+}
+.form input:focus {
+    outline: none;
+  }
+
+#enviar {
+justify-content: center;
+background-color: black;
+color: white;
+border: black 2px solid;
+padding: 10px;
+border-radius: 2px;
+transition: all 0.5s;
+}
+
+#enviar:hover {
+display: flex;
+justify-content: center;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: rgb(0, 0, 0) 2px solid;
+border-radius: 2px;
+transition: all 0.5s;
+cursor: pointer;
+}
+p {
+margin-bottom: 400px;
+}
+
+.senha {
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.senha input {
+    border: none;
+    width: 100%;
+}
+.senha input:focus {
+    width: 100%;
+    outline: none;
+}
+.versenha {
+    cursor: pointer;
+    width: 40px;
+    display: block;
+    transition: initial 2ms;
+}
+.versenha1 {
+    display: none;
+    width: 40px;
+    transition: initial 2ms;
+}
