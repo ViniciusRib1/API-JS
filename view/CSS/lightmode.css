@@ -1,0 +1,275 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+#output {
+  margin-top: 20px;
+}
+.menu {
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      text-align: center;
+      align-items: center;
+      border-bottom: 2px solid white;
+      position: absolute;
+      width: 100%;
+      height: 10%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: black;
+}
+
+.items {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.modepage {
+  color:  black;;
+  margin-left: auto;
+}
+.modepage:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(54, 53, 53);
+}
+.sobre {
+      text-align: center;
+      color: black;
+}
+#select {
+  color: rgb(72, 71, 71);
+  text-decoration: underline;
+  font-size: 20px;
+}
+.contato a {
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s;
+}
+.contato a:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  padding: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 30px;
+}
+.form-container {
+display: flex;
+flex-direction: column;
+border: 2px solid black;
+align-items: center;
+padding-top: 10%;
+color: black;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+text-align: left;
+width: 30%;
+border: 2px solid rgb(0, 0, 0);
+height: 400px;
+padding: 20px;
+color: black;
+}
+
+.form input {
+font-size: 20px;
+color: black;
+}
+.form h1 {
+text-align: center;
+border-bottom: solid rgb(0, 0, 0);
+padding-bottom: 20px;
+color: black;
+}
+.form input:focus {
+  outline: none;
+}
+.form p {
+  color: black;
+}
+.form h2 {
+  color: black;
+}
+
+#enviar {
+justify-content: center;
+background-color: black;
+color: rgb(255, 255, 255);
+border: rgb(255, 255, 255) 2px solid;
+padding: 10px;
+border-radius: 2px;
+transition: all 0.5s;
+}
+
+#enviar:hover {
+display: flex;
+justify-content: center;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border: rgb(255, 255, 255) 2px solid;
+border-radius: 2px;
+transition: all 0.5s;
+cursor: pointer;
+}
+p {
+margin-bottom: 400px;
+color: rgb(0, 0, 0);
+}
+
+.senha {
+  border: 1px rgb(0, 0, 0) solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.senha input {
+  border: none;
+  width: 100%;
+}
+.senha input:focus {
+  width: 100%;
+  outline: none;
+}
+.versenha {
+  cursor: pointer;
+  width: 40px;
+  display: block;
+}
+.versenha1 {
+  display: none;
+  width: 40px;
+}
+#select {
+color: rgb(72, 71, 71);
+text-decoration: underline;
+font-size: 20px;
+}
+.contato a {
+color: rgb(0, 0, 0);
+padding: 10px;
+margin: 10px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 5px;
+align-items: center;
+text-align: center;
+transition: all 0.5s;
+}
+.contato a:hover {
+color: rgb(0, 0, 0);
+text-shadow: 1px 1px 1px white;
+padding: 20px;
+border: 2px solid black;
+border-radius: 5px;
+align-items: center;
+text-align: center;
+transition: all 0.5s;
+font-size: 30px;
+}
+.form-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.form {
+display: flex;
+flex-direction: column;
+text-align: left;
+width: 500px;
+height: 50%;
+border: 2px solid rgb(255, 255, 255);
+padding: 20px;
+
+}
+
+.form input {
+font-size: 20px;
+padding: 10px;
+}
+.form h1 {
+text-align: center;
+border-bottom: solid rgb(252, 252, 252);
+padding-bottom: 20px;
+color: rgb(0, 0, 0);
+}
+.form input:focus {
+outline: none;
+}
+
+#enviar {
+justify-content: center;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border: rgb(255, 255, 255) 2px solid;
+padding: 10px;
+border-radius: 2px;
+transition: all 0.5s;
+}
+
+#enviar:hover {
+display: flex;
+justify-content: center;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border: rgb(0, 0, 0) 2px solid;
+border-radius: 2px;
+transition: all 0.5s;
+cursor: pointer;
+}
+p {
+margin-bottom: 400px;
+color: white;
+}
+
+.senha {
+border: 1px black solid;
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: rgb(0, 0, 0);
+background-color: white;
+}
+.senha input {
+border: none;
+width: 100%;
+}
+.senha input:focus {
+width: 100%;
+outline: none;
+}
+.versenha {
+cursor: pointer;
+width: 40px;
+display: block;
+transition: initial 2ms;
+color: black;
+}
+.versenha1 {
+display: none;
+width: 40px;
+transition: initial 2ms;
+}
+h1 {
+color: white;
+}
+h2 {
+color: white;
+}
